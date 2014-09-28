@@ -34,7 +34,7 @@ class wpStatusPageMeta {
 		if ( $is_status_page ):
 
 			$meta_boxes[] = array(
-				'title' 				=> __('Status Page - Status Points', 'wp-status-page'),
+				'title' 				=> __('Status Items', 'wp-status-page'),
 				'pages' 				=> array('page'),
 				'type' 					=> 'group',
 				'repeatable'     		=> true,
@@ -42,7 +42,7 @@ class wpStatusPageMeta {
 				'sortable'				=> true,
 				'fields' 				=> array(
 					array(
-						'id'			=> '_wsp_watch_status',
+						'id'			=> '_wsp_watch_items',
 						'name'			=> __('Status Group', 'wp-status-page'),
 						'type' 			=> 'group',
 						'fields'		=> array(
@@ -53,7 +53,7 @@ class wpStatusPageMeta {
 								'cols'		=> 6
 							),
 							array(
-								'id'			=> 'item_status',
+								'id'			=> 'status',
 								'name'			=> __('Status of Item', 'wp-status-page'),
 								'type' 			=> 'select',
 								'default'		=> 'operational',
