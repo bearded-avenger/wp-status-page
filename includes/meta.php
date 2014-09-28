@@ -34,14 +34,38 @@ class wpStatusPageMeta {
 		if ( $is_status_page ):
 
 			$meta_boxes[] = array(
-				'title' 	=> __('Status Page Options', 'wp-status-page'),
-				'pages' 	=> array('page'),
-				'fields' 	=> array(
+				'title' 				=> __('Status Page - Status Points', 'wp-status-page'),
+				'pages' 				=> array('page'),
+				'type' 					=> 'group',
+				'repeatable'     		=> true,
+				'repeatable_max' 		=> 50,
+				'sortable'				=> true,
+				'fields' 				=> array(
 					array(
-						'id'             => '_wsp_options',
-						'name'           => __('Status Page Options', 'wp-status-page'),
-						'type'           => 'text',
-						'desc'			=> __('Description here','wp-status-page')
+						'id'			=> '_wsp_watch_status',
+						'name'			=> __('Status Group', 'wp-status-page'),
+						'type' 			=> 'group',
+						'fields'		=> array(
+							array(
+								'id'		=> 'item',
+								'name'		=> 'Status Item',
+								'type'		=> 'text',
+								'cols'		=> 6
+							),
+							array(
+								'id'			=> 'item_status',
+								'name'			=> __('Status of Item', 'wp-status-page'),
+								'type' 			=> 'select',
+								'default'		=> 'operational',
+								'cols'			=> 6,
+								'options' 		=> array(
+							        'operational' 	=>__('Operational','wp-status-page'),
+							        'issues' 		=> __('Performance Issues','wp-status-page'),
+							        'disruption' 	=> __('Service Disruption','wp-status-page'),
+							        'offline'		=> __('Offline','wp-status-page')
+							    )
+							)
+						)
 					)
 				)
 			);
