@@ -15,7 +15,7 @@
  * Plugin Name:       WP Status Page
  * Plugin URI:        http://wpstatus.page.com
  * Description:       A status page plugin for WordPress.
- * Version:           1.0.0
+ * Version:           0.1
  * Author:            Nick Haskins
  * Author URI:        http://nickhaskins.com
  * Text Domain:       wp-status-page-locale
@@ -30,6 +30,10 @@
 if ( ! defined( 'WPINC' ) ) {
 	die;
 }
+
+define('WPSTATUSPAGE_VERSION', '0.1');
+define('WPSTATUSPAGE_DIR', plugin_dir_path( __FILE__ ));
+define('WPSTATUSPAGE_URL', plugins_url( '', __FILE__ ));
 
 /*----------------------------------------------------------------------------*
  * Public-Facing Functionality
