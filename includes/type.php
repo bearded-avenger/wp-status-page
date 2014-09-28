@@ -35,13 +35,12 @@ class wpStatusPageType {
 			'labels'              		=> $labels,
 			'supports'            		=> array( 'title', 'editor' ),
 			'hierarchical'        		=> false,
-			'public'              		=> true,
+			'public'              		=> false,
  			'show_ui' 					=> true,
 			'exclude_from_search'		=> true,
 			'query_var' 				=> true,
 			'can_export' 				=> true,
-			'has_archive'				=> 'status',
-			'rewrite'					=> array('with_front' => false, 'slug' => 'status'),
+			'has_archive'				=> false,
 			'capability_type' 			=> 'post'
 		);
 

@@ -8,7 +8,12 @@ class wpStatusPageScriptLoader {
 
 	function scripts() {
 
-		wp_enqueue_style( 'wsp-style', WPSTATUSPAGE_URL.'/public/assets/css/wp-status-page.css', WPSTATUSPAGE_VERSION, true);
+		$is_status_page = wsp_get_meta( get_the_ID(), '_wsp_active' );
+
+	    if ( $is_status_page ) {
+
+			wp_enqueue_style( 'wsp-style', WPSTATUSPAGE_URL.'/public/assets/css/wp-status-page.css', WPSTATUSPAGE_VERSION, true);
+		}
 
 	}
 }

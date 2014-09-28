@@ -58,9 +58,11 @@ class WP_Status_Page {
 		// Activate plugin when new blog is added
 		add_action( 'wpmu_new_blog', array( $this, 'activate_new_site' ) );
 
+		require_once( WPSTATUSPAGE_DIR.'/includes/helpers.php' );
 		require_once( WPSTATUSPAGE_DIR.'/includes/template-load.php' );
 		require_once( WPSTATUSPAGE_DIR.'/includes/type.php' );
 		require_once( WPSTATUSPAGE_DIR.'/includes/scripts.php' );
+
 	}
 
 	/**

@@ -9,7 +9,10 @@ class wpStatusPageTemplater {
 	function template_loader($template) {
 
 
-	   	if ( 'status_page' == get_post_type() ):
+		$is_status_page = wsp_get_meta( get_the_ID(), '_wsp_active' );
+
+	    // override single
+	    if ( $is_status_page ):
 
 	    	if ( $overridden_template = locate_template( 'status-page-template.php', true ) ) {
 
