@@ -14,9 +14,6 @@ class wpStatusPageMeta {
 	*/
 	function meta( array $meta_boxes ) {
 
-		$post_id 		= isset( $_GET['post'] ) ? $_GET['post'] : null;
-		$is_status_page = get_post_meta( $post_id, '_wsp_active', true );
-
 		$meta_boxes[] = array(
 			'title' 			=> __('Status Page', 'wp-status-page'),
 			'pages' 			=> array('page'),
@@ -31,46 +28,39 @@ class wpStatusPageMeta {
 			)
 		);
 
-		if ( $is_status_page ):
-
-			$meta_boxes[] = array(
-				'title' 				=> __('Status Items', 'wp-status-page'),
-				'pages' 				=> array('page'),
-				'type' 					=> 'group',
-				'repeatable'     		=> true,
-				'repeatable_max' 		=> 50,
-				'sortable'				=> true,
-				'fields' 				=> array(
-					array(
-						'id'			=> '_wsp_watch_items',
-						'name'			=> __('Status Group', 'wp-status-page'),
-						'type' 			=> 'group',
-						'fields'		=> array(
-							array(
-								'id'		=> 'item',
-								'name'		=> 'Status Item',
-								'type'		=> 'text',
-								'cols'		=> 6
-							),
-							array(
-								'id'			=> 'status',
-								'name'			=> __('Status of Item', 'wp-status-page'),
-								'type' 			=> 'select',
-								'default'		=> 'operational',
-								'cols'			=> 6,
-								'options' 		=> array(
-							        'operational' 	=>__('Operational','wp-status-page'),
-							        'issues' 		=> __('Performance Issues','wp-status-page'),
-							        'disruption' 	=> __('Service Disruption','wp-status-page'),
-							        'offline'		=> __('Offline','wp-status-page')
-							    )
-							)
+		$meta_boxes[] = array(
+			'title' => __('Post Tutorial Steps', 'wp-status-page'),
+			'pages' => array('page'),
+			'fields' => array(
+				array(
+					'id' 			=> '_wsp_watch_status',
+					'name' 			=> __('Item', 'wp-status-page'),
+					'type' 			=> 'group',
+					'repeatable'     => true,
+					'repeatable_max' => 20,
+					'sortable'		=> true,
+					'desc'			=> __('Test', 'wp-status-page'),
+					'fields' 		=> array(
+						array(
+							'id' 	=> 'name',
+							'name' 	=> __('Item Name', 'wp-status-page'),
+							'type' 	=> 'text',
+							'cols'	=> 6
+						),
+						array(
+							'id' 	=> 'status',
+							'name' 	=> __('Item Status', 'wp-status-page'),
+							'type' 	=> 'select',
+								'options'	=> array(
+									'operational'	=> __('Operational', 'wp-status-page'),
+									'issues'		=> __('Performance Issues', 'wp-status-page')
+								),
+							'cols'	=> 6
 						)
 					)
 				)
-			);
-
-		endif;
+			)
+		);
 
 		return $meta_boxes;
 
