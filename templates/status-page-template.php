@@ -2,9 +2,11 @@
 
 <!-- WSP Header -->
 <header class="wsp-header">
+
 	<div class="wsp-container">
 		- header area with name or logo and header image
 	</div>
+
 </header>
 
 <!-- WSP Main -->
@@ -28,9 +30,11 @@
 
 <!-- WSP Footer -->
 <footer class="wsp-footer">
+
 	<div class="wsp-container">
 		- footer area here with byline and social links
 	</div>
+
 </footer>
 
 <?php wp_footer();
