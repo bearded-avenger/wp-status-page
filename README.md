@@ -8,4 +8,6 @@ Feature List - Brainstorming Phase - No guarantee of any/all features being in 1
 - define custom status watch items
 - allow users to subscribe to updates
 - real-time watch status of URL's
+- uptime metrics like site load time and history
 - detect GH commit changes addressing specific issues with custom commit tags
+- integration with slack, github, bitbucket, pingdom
