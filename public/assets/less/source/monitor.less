@@ -4,8 +4,9 @@
     .wsp-container {
         position: relative;
         z-index: 1;
-        .x-rem(padding-top,2);
-        .x-rem(padding-bottom,2);
+        .x-rem(padding-top,@display-padding);
+        .x-rem(padding-bottom,@display-padding);
+        .x-rem(margin-bottom,@display-margin);
     }
 
     .wsp-updates-img {
@@ -28,10 +29,47 @@
         display: block;
         width:100%;
         .clearfix();
+        .x-rem(margin-bottom,@monitor-item-margin);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
 
         div {
             width:50%;
             float: left;
+
+            span {
+                display:inline-block;
+                .x-rem(padding-bottom,@monitor-item-padding);
+                .x-rem(padding-top,@monitor-item-padding);
+            }
         }
     }
+}
+
+.wsp-monitor-has-img {
+    .wsp-monitoring li {
+        color:@monitor-text-with-image;
+    }
+}
+
+// event status
+.event-ok,
+.event-issues,
+.event-offline {
+    .wsp-monitoring-status span {
+        .x-rem(padding,@monitor-item-padding);
+    }
+}
+
+.event-ok .wsp-monitoring-status span {
+    background: @event-ok;
+}
+
+.event-issues .wsp-monitoring-status span {
+    background: @event-issues;
+}
+.event-offline .wsp-monitoring-status span {
+    background: @event-offline;
 }

@@ -10,22 +10,22 @@
 
 </header>
 
-<section class="wsp-monitor">
+<section class="wsp-monitor wsp-monitor-has-img">
 
 	<div class="wsp-container">
 
 		<ul class="wsp-monitoring">
-			<li>
-				<div class="wsp-monitoring-item">API</div>
-				<div class="wsp-monitoring-status">OK</div>
+			<li class="event-ok">
+				<div class="wsp-monitoring-item"><span>API</span></div>
+				<div class="wsp-monitoring-status"><span>OK</span></div>
 			</li>
-			<li>
-				<div class="wsp-monitoring-item">Web</div>
-				<div class="wsp-monitoring-status">Performance Issues</div>
+			<li class="event-issues">
+				<div class="wsp-monitoring-item"><span>Web</span></div>
+				<div class="wsp-monitoring-status"><span>Performance Issues</span></div>
 			</li>
-			<li>
-				<div class="wsp-monitoring-item">Database</div>
-				<div class="wsp-monitoring-status">Offline</div>
+			<li class="event-offline">
+				<div class="wsp-monitoring-item"><span>Database</span></div>
+				<div class="wsp-monitoring-status"><span>Offline</span></div>
 			</li>
 		</ul>
 
@@ -70,5 +70,7 @@
 	</div>
 
 </footer>
+
+</body>
 
 <?php wp_footer();

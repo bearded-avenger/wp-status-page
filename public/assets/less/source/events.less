@@ -1,0 +1,49 @@
+.wsp-event {
+    border-bottom:1px solid @border-color;
+    .x-rem(padding-bottom,@article-padding-bottom);
+    .x-rem(margin-bototm,@article-margin-bottom);
+    position: relative;
+    .clearfix();
+
+    .wsp-event-header,
+    .wsp-event-body {
+        float: left;
+    }
+
+    .wsp-event-header {
+        width:14%;
+        margin-right:1%;
+    }
+
+    .wsp-event-footer,
+    .wsp-event-body {
+        width:85%;
+    }
+
+    .wsp-event-footer {
+        float: right;
+    }
+}
+
+.wsp-event-meta {
+    span {
+        display: block;
+    }
+
+    .wsp-event-year {
+
+    }
+    .wsp-event-day {
+        font-weight:bold;
+        .x-rem(font-size, @event-day-font-size);
+    }
+    .wsp-event-month {
+
+    }
+}
+
+.wsp-event-body {
+    h2 {
+        margin-top:0;
+    }
+}
