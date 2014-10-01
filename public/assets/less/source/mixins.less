@@ -1,3 +1,19 @@
+.x-rem (@property, @value) {
+    @px-fallback: @value * 10px;
+    -: ~`(function () { return ';@{property}: @{px-fallback}'; }())`;
+    -: ~`(function () { return ';@{property}: @{value}rem'; }())`;
+}
+
+.clearfix() {
+    &:before,
+    &:after {
+        content: " "; /* 1 */
+        display: table; /* 2 */
+    }
+    &:after {
+        clear: both;
+    }
+}
 
 .transition( @duration: 1s, @easing: ease ) {
 

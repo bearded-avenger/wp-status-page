@@ -62,6 +62,7 @@ class WP_Status_Page {
 		require_once( WPSTATUSPAGE_DIR.'/includes/template-load.php' );
 		require_once( WPSTATUSPAGE_DIR.'/includes/type.php' );
 		require_once( WPSTATUSPAGE_DIR.'/includes/scripts.php' );
+		require_once( WPSTATUSPAGE_DIR.'/public/includes/clean.php');
 		require_once( WPSTATUSPAGE_DIR.'/public/includes/options.php' );
 
 	}
