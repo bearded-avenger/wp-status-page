@@ -1,6 +1,7 @@
 <?php wp_head(); ?>
 
-<!-- WSP Header -->
+<body class="wp-status-page customize-support">
+
 <header class="wsp-header">
 
 	<div class="wsp-container">

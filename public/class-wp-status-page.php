@@ -53,18 +53,13 @@ class WP_Status_Page {
 	private function __construct() {
 
 		// Load plugin text domain
-		add_action( 'init', array( $this, 'load_plugin_textdomain' ) );
-
-		// Activate plugin when new blog is added
-		add_action( 'wpmu_new_blog', array( $this, 'activate_new_site' ) );
+		add_action( 'init', 		array( $this, 'load_plugin_textdomain' ) );
 
 		require_once( WPSTATUSPAGE_DIR.'/includes/helpers.php' );
-		require_once( WPSTATUSPAGE_DIR.'/includes/template-load.php' );
 		require_once( WPSTATUSPAGE_DIR.'/includes/type.php' );
 		require_once( WPSTATUSPAGE_DIR.'/includes/scripts.php' );
 		require_once( WPSTATUSPAGE_DIR.'/public/includes/clean.php');
-		require_once( WPSTATUSPAGE_DIR.'/public/includes/options.php' );
-
+		require_once( WPSTATUSPAGE_DIR.'/includes/template-load.php' );
 	}
 
 	/**

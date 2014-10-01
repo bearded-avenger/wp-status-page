@@ -12,21 +12,7 @@ class wpStatusPageClean {
 
 		if ( $is_status_page) {
 
-    		wp_deregister_style('twentyfourteen-style');
-    		wp_dequeue_style('twentyfourteen-style');
-
-    		wp_deregister_style('twentyfourteen-lato');
-    		wp_dequeue_style('twentyfourteen-lato');
-
-    		wp_deregister_style('genericons');
-    		wp_dequeue_style('genericons');
-
-    		wp_deregister_script('twentyfourteen-script');
-    		wp_dequeue_script('twentyfourteen-script');
-
-    		wp_deregister_script('comment-reply');
-    		wp_dequeue_script('comment-reply');
-
+    		// clean the head out of unnecessary info
 	    	remove_action('wp_head', 'rsd_link');
 	    	remove_action('wp_head', 'feed_links_extra', 3);
 			remove_action('wp_head', 'wlwmanifest_link');
@@ -38,5 +24,6 @@ class wpStatusPageClean {
 			remove_action('wp_head', 'wp_generator');
 		}
 	}
+
 }
 new wpStatusPageClean;
