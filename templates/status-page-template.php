@@ -31,7 +31,7 @@
 
 	</div>
 
-	<div class="wsp-updates-img" style="background-image:url(http://placekitten.com/1200/400);background-repeat:no-repeat;background-size:cover;"></div>
+	<div class="wsp-updates-img" style="background-image:url(<?php echo WPSTATUSPAGE_URL.'/public/assets/img/default-bg.jpg';?>);background-repeat:no-repeat;background-size:cover;"></div>
 
 </section>
 
@@ -50,10 +50,11 @@
 				</div>
 			</header>
 			<main class="wsp-event-body">
-				<h2><span>2:25</span>&nbsp;Scheduled Maintenance</h2>
+				<h2>Scheduled Maintenance</h2>
 				<p>This evening we'll be performing scheduled maintenace on our servers.</p>
 			</main>
 			<footer class="wsp-event-footer">
+				<div class="wsp-event-time">2:25</div>
 				<a href="#">Read more</a>
 			</footer>
 		</article>

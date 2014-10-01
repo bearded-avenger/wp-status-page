@@ -5,27 +5,44 @@
     position: relative;
     .clearfix();
 
+    .wsp-event-time,
     .wsp-event-header,
     .wsp-event-body {
         float: left;
     }
 
+    .wsp-event-time,
     .wsp-event-header {
-        width:14%;
+        width:12%;
         margin-right:1%;
+        position: relative;
     }
 
-    .wsp-event-footer,
     .wsp-event-body {
-        width:85%;
+        width:87%;
     }
 
     .wsp-event-footer {
-        float: right;
+        .clearfix();
+        clear:left;
+        .wsp-event-time {
+            position: relative;
+            left:2px;
+            font-family:'Courier New', sans-serif;
+        }
+        a {
+            width:87%;
+            float:left;
+        }
     }
+
 }
 
 .wsp-event-meta {
+
+    float: left;
+    text-align: center;
+
     span {
         display: block;
     }
@@ -35,11 +52,14 @@
     }
     .wsp-event-day {
         font-weight:bold;
+        letter-spacing: -1px;
         .x-rem(font-size, @event-day-font-size);
+        .x-rem(line-height,@event-day-font-size - 0.35)
     }
     .wsp-event-month {
-
+        text-transform: uppercase;
     }
+
 }
 
 .wsp-event-body {
